@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://ilsum.github.io/ilsum/2023/dataset.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ILSUM2024</title>
+    
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="16x40" href="ILSUM_LOGO.png">
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js.download"></script>
+    <script src="bootstrap.min.js.download"></script>
+
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        /* Add a gray background color and some padding to the footer */
+        
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        p {
+            font-size: 20px;
+        }
+        
+        .nav a.active {
+            background-color: #078186;
+            color: white;
+        }
+        
+        .nav a {
+            color: black;
+            font-size: 18px;
+        }
+        
+        .nav a:hover {
+            color: #078186;
+        }
+        
+        .nav-test {
+            background-color: #f2f2f2;
+            padding: 20px
+        }
+        
+        .panel-group {
+            padding: 5px
+        }
+        
+        .jumbotron {
+            position: relative;
+        }
+        
+        #logo {
+            position: absolute;
+            top: 1px;
+            left: 1px;
+        }
+    </style>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1179.0" data-gr-ext-installed="">
+
+
+    <div class="jumbotron">
+        <div class="container text-center">
+            <img src="ILSUM_LOGO.png" alt="ILSUM" heigh="20%" width="20%">
+            <h1>ILSUM 2024</h1>
+            <p>Indian Language Summarization</p>
+        </div>
+    </div>
+
+
+
+
+    <div class="container-fluid bg-2">
+
+        <div class="row ">
+
+            <div class="col-sm-2 nav-test">
+                <ul class="nav nav-pills nav-stacked ">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">Track Description<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="Database.html">Dataset and Evaluation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Registration.html">Registration</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="important_dates.html">Important dates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Result.html">Results</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Announcement.html">Announcement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Organizer.html">Organizers</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link " href="results.html">Results</a>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="col-sm-9">
+
+                <div class="panel-group" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="tab_148">
+                            <h3 class="panel-title" style="color:#078186; font-size: 25px;">
+                                <b>Dataset</b>
+                            </h3>
+                        </div>
+                        <br>
+                        <div class="panel-body">
+                          <p> In the second edition we offered tasks in Hindi, Gujarati, Bengali and Indian English. Each
+                                language had over 15,000 document-summary pairs extracted from leading newspapers. This
+                                year we aim to expand the existing dataset, add a dravidian language. We also aim to offer
+                                cross lingual summarization dataset across some of the pairs of language. </p>  
+                       <div class="panel-heading" role="tab" id="tab_149">
+
+                        <h4 class="panel-title" style="color:#078186; font-size: 20px;">
+
+                            <b>Task 1</b>
+                        </h4>
+                        <br>
+                        A new version of training data for Task 1 has now been released. Version 2 has the following changes:
+                        <ol>
+                            <li> The english dataset includes abstractive summaries for a part of the training set </li>
+                            <li> Includes ILSUM 2022 dataset (train, val and test) </li>
+                            <li> Removed certain entries with missing article or summary </li>
+                            <li> The ids now reflect year and category (e.g. 2023_train_1) </li>
+                            <li> The new dataset is a superset of V1, and excludes the incorrect entries mentioned in point 2 </li>
+                        </ol>
+                         <br>
+                       
+                            <div class="table-responsive">    
+                                <table class="table table-hover table-bordered">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>Train Dataset</th>
+                                            <th>Test Dataset</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td>
+                                                Hindi Dataset
+                                            </td>
+                                            <td>
+                                                <a href="https://ilsum.github.io/data/2023/HindiNews_train_v2.zip">Download (Version 2)</a>
+                                            </td>
+                                            
+                                            <td>
+                                                <a href="https://ilsum.github.io/data/2023/HindiNews_test.zip">Download</a>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Gujarati Dataset
+                                            </td>
+                                            <td>
+                                                <a href="https://ilsum.github.io/data/2023/GujaratiNews_train_v2.zip">Download (Version 2)</a>
+                                            </td>
+                                            <td>
+                                                <a href="https://ilsum.github.io/data/2023/GujaratiNews_test.zip">Download</a>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Bengali Dataset
+                                            </td>
+                                            <td>
+                                                <a href="https://ilsum.github.io/data/2023/BengaliNews_train_v2.zip">Download (Version 2)</a>
+                                            </td>
+                                            <td>
+                                                <a href="https://ilsum.github.io/data/2023/BengaliNews_test.zip">Download</a>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                English Dataset
+                                            </td>
+                                            <td>
+                                                <a href="https://ilsum.github.io/data/2023/EnglishNews_train_v2.zip">Download (Version 2)</a>
+                                            </td>
+                                            <td>
+                                                <a href="https://ilsum.github.io/data/2023/EnglishNews_test.zip">Download</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                       <div class="panel-heading" role="tab" id="tab_148">
+
+                        <h4 class="panel-title" style="color:#078186; font-size: 20px;">
+
+                            <b>Task 2</b>
+                        </h4>
+                            <br>
+                            The dataset contains the following 
+                            <ol>
+                            <li> Original news articles</li>
+                            <li> Factually correct abstractive summary </li> 
+                            <li> Factually incorrect abstractive summary (for a subset of the data)</li>
+                            <li> Type of incorrectness</li>
+                        </ol>
+                        <div>An incorrect summary can have multiple types associated with it, but only one label is provided in the training data. 
+                            The test data will have all the applicable labels.
+
+                        </div>
+                            <br>
+                            <div class="table-responsive">    
+                                <table class="table table-hover table-bordered">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>Train Dataset</th>
+                                            
+                                            <th>Test Dataset</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td>
+                                                Task 2 Dataset
+                                            </td>
+                                            <td>
+                                                <a href="https://ilsum.github.io/data/2023/Task2_train.zip">Download</a>
+                                            </td>
+                                            
+                                            <td>
+                                                <a href="https://ilsum.github.io/data/2023/Task2-ilsum23-test-published.zip">Download</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        
+                                <div class="text-danger">Note: All the datasets are password protected, please register to get access to the data.
+                                </div>
+                            <!--<h4><a href="https://ilsum.github.io/ilsum/2022/dataset.html">Please click here for ILSUM 2022 Datasets</a></h4>-->
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+                <div class="panel-group" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="tab_148">
+                            <h3 class="panel-title" style="color:#078186; font-size: 25px;">
+
+                                <b>Evaluation</b>
+                            </h3>
+                        </div>
+
+                        <div class="panel-body">
+                            <p> The Recall-Oriented Understudy for Gisting Evaluation (ROUGE) metrics [4]
+will be utilized as the standard method for evaluating automatic summarization in the live
+submission system. Additionally, once all submissions have been received, the BERT score[7]
+will be used offline to gain insight into abstractive summarization methods. We also plan to do
+manual evaluation on part of the dataset. </p>
+
+                            <div class="table-responsive">
+                                <p>Standard ROUGE metrics Rouge-1, Rouge-2 and Rouge-4 F-scores and BERT-Score will be used for evaluation for Task 1 and Macro F1 Score will be used for Task 2. </p>
+                                <br> Note: While we will use a max length of 75 words for evaluation, participants are expected to predict an appropriate summary length for each article. Too long or short lengths compared to the groud truth summary can
+                                adverseley effect ROUGE precision or recall respectively.
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <br>
+    <br>
+    <footer class="sticky-footer">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <h3><span>For any queries write to us at <b><a href="mailto:%20ilsum@googlegroups.com"> ilsum@googlegroups.com </a></b>
+                    <br> Subscribe to our <b><a href="https://groups.google.com/g/ilsum"> mailing list </a></b> for the latest announcements and discussions.</span>
+                </h3>
+            </div>
+            <div class="copyright text-center my-auto">
+                <span><h4>Copyright © ILSUM 2023</h4></span>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;limited&quot;,&quot;isActive&quot;:false,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

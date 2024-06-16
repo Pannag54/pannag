@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://ilsum.github.io/ilsum/2023/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ILSUM2024</title>
+    
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="16x40" href="ILSUM_LOGO.png">
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js.download"></script>
+    <script src="bootstrap.min.js.download"></script>
+
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        /* Add a gray background color and some padding to the footer */
+        
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .nav a.active {
+            background-color: #078186;
+            color: white;
+        }
+
+        .nav a {
+            color: black;
+            font-size: 18px;
+        }
+
+        .nav a:hover {
+            color: #078186;
+        }
+
+        .nav-test {
+            background-color: #f2f2f2;
+            padding: 20px
+        }
+
+        .panel-group {
+            padding: 5px
+        }
+
+        .jumbotron {
+            position: relative;
+        }
+
+        #logo {
+            position: absolute;
+            top: 1px;
+            left: 1px;
+        }
+
+        @keyframes blink {
+    0%, 100% { color: blue; }
+    50% { color: red; }
+    25% { color: green;}
+  }
+
+  .blinking-text {
+    animation: blink 1s infinite;
+  }
+    </style>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1179.0" data-gr-ext-installed="">
+
+
+    <div class="jumbotron">
+        <div class="container text-center">
+            <img src="ILSUM_LOGO.png" alt="ILSUM" heigh="20%" width="20%">
+            <h1>ILSUM 2024</h1>
+            <p>Indian Language Summarization</p>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid bg-2">
+
+        <div class="row ">
+
+            <div class="col-sm-2 nav-test">
+                <ul class="nav nav-pills nav-stacked ">
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="index.html">Track Description<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="Database.html">Dataset and Evaluation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Registration.html">Registration</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="important_dates.html">Important dates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Result.html">Results</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Announcement.html">Announcement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Organizer.html">Organizers</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link " href="results.html">Results</a>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="col-sm-9">
+
+                <div class="panel-group" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="tab_148">
+                            <h3 class="panel-title" style="color:#078186; font-size: 25px;">
+
+                                <b>Overview</b>
+
+
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>
+
+                                Automatic text summarization for Indian languages has received surprisingly little
+                                attention from the NLP research community.
+                                While large scale datasets exist for a number of languages like English, Chinese,
+                                French, German, Spanish, etc. no such datasets
+                                exist for any Indian languages. Most existing datasets are either not public, or are too
+                                small to be useful.
+                                Through this shared task we aim to bridge the existing gap by creating reusable corpora
+                                for Indian Language Summarization.
+                                In the second edition we cover three major indian languages Hindi, Gujarati and Bengali
+                                which have over 350 million, 50 million and 200 million speakers respectively. Apart
+                                from this we also include Indian English, a widely regonized dialect
+                                which can be substantially different from English spoken elsewhere.
+                            </p>
+                            <p>
+                                The second edition of ILSUM consist two tasks,<br>
+                            </p><ul>
+                                <li>
+                                    <p>Task 1: Language Summarization For Indian Languages</p>
+                                </li>
+                                <li>
+                                    <p>Task 2: Detecting Factual Incorrectness in Machine Generated Summaries</p>
+                                </li>
+                            </ul>
+                            <p></p>
+
+
+
+                            <!-- <br><br> The dataset for this task is built using articles and headline pairs from several leading newspapers of the country. We provide ~10,000 news articles for each language. The task is to generate a meaningful fixed
+                                length summary, either extractive or abstractive, for each article. While several previous works in other languages use news artciles - headlines pair, the current dataset poses a unique challenge of code-mixing and script
+                                mixing. It is very common for news articles to borrow phrases from english, even if the article itself is written in an Indian Language.
+
+                                <br><br> Examples like these are a common occurence both in the headlines as well as in the articles.
+
+                                <ul>
+                                    <li>
+                                        <p> "IND vs SA, 5મી T20 તસવીરોમાં: વરસાદે વિલન બની મજા બગાડી" (India vs SA, 5th T20 in pictures: rain spoils the match) </p>
+                                    </li>
+
+                                    <li>
+                                        <p> "LIC के IPO में पैसा लगाने वालों का टूटा दिल, आई एक और नुकसानदेह खबर" (Investors of LIC IPO left broken hearted, yet another bad news). </p>
+                                    </li>
+                                    <br><br>
+ -->
+
+                        </div>
+                        <div class="panel-heading" role="tab" id="tab_148">
+                            <h3 class="panel-title" style="color:#078186; font-size: 25px;">
+
+                                <b>Task 1: Text Summarization For Indian Languages</b>
+                            </h3>
+                        </div>
+                        <br>
+                        <div class="panel-body">
+                            <p>The dataset for this task is built using articles and headline pairs from several leading
+                                newspapers of the country. We provide ~15,000 news articles for each language. The task
+                                is to generate a meaningful fixed
+                                length summary, either extractive or abstractive, for each article. While several
+                                previous works in other languages use news artciles - headlines pair, the current
+                                dataset poses a unique challenge of code-mixing and script
+                                mixing. It is very common for news articles to borrow phrases from english, even if the
+                                article itself is written in an Indian Language.
+                            </p>
+                            <p>Examples like these are a common occurence both in the headlines as well as in the
+                                articles.
+                            </p>
+                            <ul>
+                                <li>
+                                    <p> "IND vs SA, 5મી T20 તસવીરોમાં: વરસાદે વિલન બની મજા બગાડી" (India vs SA, 5th T20
+                                        in pictures: rain spoils the match) </p>
+                                </li>
+
+                                <li>
+                                    <p> "LIC के IPO में पैसा लगाने वालों का टूटा दिल, आई एक और नुकसानदेह खबर" (Investors
+                                        of LIC IPO left broken hearted, yet another bad news). </p>
+                                </li>
+                        </ul></div>
+                        <div class="panel-heading" role="tab" id="tab_148">
+                            <h3 class="panel-title" style="color:#078186; font-size: 25px;">
+                                
+                                <b>Task 2: Detecting Factual Incorrectness in Machine Generated Summaries   <span class="blinking-text">NEW!</span></b>
+                            </h3>
+                        </div>
+
+                        <div class="panel-body">
+                            <p>The task is centered around identifying factual errors in machine-generated summaries.
+                                Participants will be provided with an article and its corresponding machine-generated
+                                summary. The objective is to categorize each datapoint into different categories based on the
+                                presence of factual incorrectness in the summaries. We cover four types of factual error for this edition.
+                            </p>
+                            <p>Possible types of factual incorrectness:</p>
+                            <ul>
+                                <li>
+                                    <p><b>Misrepresentation:</b>This involves presenting information in a way that is
+                                        misleading or that gives a false impression. This could be done by exaggerating
+                                        certain aspects, understating others, or twisting facts to fit a particular
+                                        narrative.</p>
+                                </li>
+                                <li>
+                                    <p><b>Inaccurate Quantities or Measurements: </b>Factual incorrectness can occur
+                                        when precise quantities, measurements, or statistics are misrepresented, whether
+                                        through error or intent.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><b>False Attribution: </b>Incorrectly attributing a statement, idea, or action to
+                                        a person or group is another form of factual incorrectness.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><b>Fabrication: </b>Making up data, sources, or events is a severe form of
+                                        factual incorrectness. This involves creating "facts" that have no basis in
+                                        reality.
+                                    </p>
+                                </li>
+                            </ul>
+                            <br>
+                            <p style="font-size: 20px;"><b>EXAMPLE</b></p>
+                            <div class="panel-body">
+                                <p style="font-size: 17px;"><b>ARTICLE</b></p>
+                                <div class="panel-body">
+                                    <p>At least 13 people, including five children, have been admitted to health
+                                        facilities in Gandhinagar after a suspected outbreak of cholera in the Kalol
+                                        municipality.
+                                    </p>
+                                    <p>
+                                        According to Gandhinagar Collector Hitesh Koya, two cases of cholera were
+                                        confirmed on June 22 following which a notification was issued the same day
+                                        declaring a two-kilometre radius of the outbreak epicentre as ‘choler-affected’
+                                        under the Epidemic Diseases Act. It is to remain status quo for a month. The
+                                        areas declared as cholera-affected include the vicinity of Matva Kuva road of
+                                        the municipality.
+                                    </p>
+                                    <p>
+                                        State Health Minister Rushikesh Patel apprised of the situation Union Home
+                                        Minister Amit Shah, in whose electoral constituency the municipality falls
+                                        under, stated an official release from the BJP.
+                                    </p>
+                                    <p>
+                                        “A total of 13 persons, including five children, are admitted at present and all
+                                        are stable. We believe the outbreak could have been due to water contamination
+                                        owing to leaks detected in the drainage pipes as well as water supply pipes,”
+                                        said Koya.
+                                    </p>
+                                    <p>
+                                        In early July, 2021, at least four had died and over 100 were suspected to be
+                                        infected by cholera in Kalol. Officials had then suspected that water pipelines,
+                                        which are nearly 40 years old, could have been the source of contamination
+                                        saying sewage water could have mixed with potable water pipelines owing to
+                                        leakages.
+                                    </p>
+                                    <p>
+                                        In March 2022, over 200 were detected with diarrhoea in ward 4 of Kalol and the
+                                        source of contamination was similarly suspected to have been due to leakage in
+                                        potable water pipelines, damaged owing to digging work for laying cables.
+                                    </p>
+                                </div>
+                                <div class="panel-body">
+                                    <p style="font-size: 25px;"><b>Different Types of Factual Incorrectness</b></p>
+                                    <div class="panel-body">
+                                        <!-- <div id="accordion" role="tablist"> -->
+                                            <div class="card">
+                                                <div class="card-header" role="tab" id="headingOne">
+                                                    
+                                                        <!-- <a data-toggle="collapse" href="#collapseOne"
+                                                            aria-expanded="true" aria-controls="collapseOne">
+                                                            Factually Correct Summary with Neutral Sentiments &emsp;&#9660;
+                                                        </a> -->
+                                                        <h4 class="mb-0">
+                                                            <button class="btn btn-lg btn-block " style="text-align:left; padding-left:6px" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                                ▼ Factually Correct Summary with Neutral Sentiments
+                                                            </button>
+                                                        </h4>
+                                                    
+                                                </div>
+                                                <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <p>Thirteen individuals, including five children, were admitted
+                                                            to health facilities in Gandhinagar due to a suspected
+                                                            cholera outbreak in the Kalol municipality. Two cases were
+                                                            confirmed, prompting a two-kilometer radius of the outbreak
+                                                            area to be declared 'cholera-affected.' The State Health
+                                                            Minister, Rushikesh Patel, communicated the situation to
+                                                            Union Home Minister Amit Shah.</p>
+                                                        <p>(Explanation: This is an accurate summarization of the facts
+                                                            presented in the original text.)</p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingTwo">
+                                                <!-- <h3 class="mb-0">
+                                                    <a class="collapsed" data-toggle="collapse" href="#collapseTwo"
+                                                        aria-expanded="false" aria-controls="collapseTwo">
+                                                        A Summary with Misrepresentation of Information&emsp;&#9660;
+                                                    </a>
+                                                </h3> -->
+                                                <h4 class="mb-0">
+                                                    <button class="btn btn-lg btn-block " style="text-align:left; padding-left:6px" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                                        ▼ A Summary with Misrepresentation of Information
+                                                    </button>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p>Pro-Establishment Summary: In response to the confirmation of two cholera
+                                                        cases in Kalol municipality, Gandhinagar, swift action was taken by the
+                                                        local authorities, with Hitesh Koya, the Gandhinagar Collector, promptly
+                                                        declaring a two-kilometer radius around the outbreak as
+                                                        'cholera-affected'. In addition, State Health Minister Rushikesh Patel
+                                                        effectively communicated the situation to Union Home Minister Amit Shah.
+                                                        The efficient response and transparent communication by the government
+                                                        demonstrates their commitment to public health and safety.
+                                                    </p><p>
+                                                        Anti-Establishment Summary: Despite previous cholera outbreaks and
+                                                        consistent warnings about the condition of water pipelines in Kalol
+                                                        municipality, the local authorities failed to prevent another outbreak,
+                                                        leading to 13 people, including five children, being admitted to health
+                                                        facilities in Gandhinagar. Although the State Health Minister, Rushikesh
+                                                        Patel, informed Union Home Minister Amit Shah, the reaction came after
+                                                        the confirmation of two cases. This repeated failure to address public
+                                                        health risks effectively underlines a lack of initiative and foresight
+                                                        from the establishment.
+                                                    </p>
+                                                    <p>(Explanation: This summary misrepresents the information by
+                                                        mischaracterizing the timing and the reaction of the authorities. 
+                                                        Summaries with misrepresentation are usually biased.)
+                                                    </p></div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="card">
+                                            <div class="card-header " role="tab" id="headingFour">
+                                                <!-- <h3 class="mb-0">
+                                                    <a class="collapsed" data-toggle="collapse" href="#collapseFour"
+                                                        aria-expanded="false" aria-controls="collapseFour">
+                                                        A Summary with Inaccurate Quantities or Measurements&emsp;&#9660;
+                                                    </a>
+                                                </h3> -->
+                                                <h4 class="mb-0">
+                                                    <button class="btn btn-lg btn-block " style="text-align:left; padding-left:6px" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                                        ▼ A Summary with Inaccurate Quantities or Measurements
+                                                    </button>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p>A cholera outbreak has affected thousands in the Kalol municipality,
+                                                        Gandhinagar. The entire region has been declared a 'cholera-affected'
+                                                        area. Over 100 cases have been confirmed, with many children being
+                                                        affected.
+                                                    </p>
+                                                    <p>(Explanation: The summary inaccurately increases the number of affected
+                                                        individuals and the geographical scope of the cholera outbreak.)
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingThree">
+                                                <!-- <h3 class="mb-0">
+                                                    <a class="collapsed" data-toggle="collapse" href="#collapseThree"
+                                                        aria-expanded="false" aria-controls="collapseThree">
+                                                        A Summary with False Attribution&emsp;&#9660;
+                                                    </a>
+                                                </h3> -->
+                                                <h4 class="mb-0">
+                                                    <button class="btn btn-lg btn-block " style="text-align:left; padding-left:6px" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                                        ▼ A Summary with False Attribution
+                                                    </button>
+                                                </h4>
+
+                                            </div>
+                                            <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p>The World Health Organization (WHO) confirmed a cholera outbreak in
+                                                        Gandhinagar's Kalol municipality, with 13 people admitted to healthcare
+                                                        facilities. The WHO has declared a two-kilometer radius around the
+                                                        outbreak area as 'cholera-affected.' The Prime Minister of India has
+                                                        been briefed about the situation.
+                                                    </p>
+                                                    <p>(Explanation: The summary falsely attributes the confirmation of the
+                                                        outbreak and the response to the WHO and the Prime Minister of India.)
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--
+                                        
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingFive">
+                                                <h3 class="mb-0">
+                                                    <a class="collapsed" data-toggle="collapse" href="#collapseFive"
+                                                        aria-expanded="false" aria-controls="collapseFive">
+                                                        A Summary with Incorrect Context&emsp;&#9660;
+                                                    </a>
+                                                </h3>
+                                                <--
+                                                <h4 class="mb-0">
+                                                    <button class="btn btn-lg btn-block " style="text-align:left; padding-left:6px" data-toggle="collapse" 
+                                                    data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                                        &#9660;&emsp;A Summary with Incorrect Context
+                                                    </button>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseFive" class="collapse" role="tabpanel"
+                                                aria-labelledby="headingFive" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p>Due to extensive city-wide construction, a cholera outbreak has arisen in
+                                                        Gandhinagar's Kalol municipality. Thirteen people, including five
+                                                        children, have been hospitalized as a result. The construction has
+                                                        caused severe damage to water supply pipes, leading to contamination.
+                                                    </p>
+                                                    <p>(Explanation: This summary incorrectly links the outbreak to city-wide
+                                                        construction, which is not mentioned in the original text.)</p>
+                                                
+                                                </div>
+                                            </div> 
+                                        </div> -->
+
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingSix">
+                                                <!-- <h3 class="mb-0">
+                                                    <a class="collapsed" data-toggle="collapse" href="#collapseSix"
+                                                        aria-expanded="false" aria-controls="collapseSix">
+                                                        A Summary with Fabricated Information&emsp;&#9660;
+                                                    </a>
+                                                </h3> -->
+
+                                                <h4 class="mb-0">
+                                                    <button class="btn btn-lg btn-block " style="text-align:left; padding-left:6px" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                                        ▼ A Summary with Fabricated Information
+                                                    </button>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p><u>A Summary with Fabricated Information:</u></p>
+                                            <p>A cholera outbreak in Gandhinagar has resulted from a genetically
+                                                modified strain that escaped a bioengineering lab. This has led to 13
+                                                hospitalizations, with five children affected. The government has
+                                                declared a two-kilometer radius of the municipality as
+                                                'cholera-affected.'
+                                            </p>
+                                            <p>(Explanation: The outbreak being linked to a genetically modified strain
+                                                and an escape from a lab is entirely fabricated and not supported by the
+                                                original text.)
+                                            </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    
+                                    </div>
+                                    <!-- <ul> -->
+
+                                        
+
+
+
+                                        <!-- <li>
+                                            <p><u>A Summary with Misrepresentation of Information:
+                                                </u></p>
+                                            <p>Pro-Establishment Summary: In response to the confirmation of two cholera
+                                                cases in Kalol municipality, Gandhinagar, swift action was taken by the
+                                                local authorities, with Hitesh Koya, the Gandhinagar Collector, promptly
+                                                declaring a two-kilometer radius around the outbreak as
+                                                'cholera-affected'. In addition, State Health Minister Rushikesh Patel
+                                                effectively communicated the situation to Union Home Minister Amit Shah.
+                                                The efficient response and transparent communication by the government
+                                                demonstrates their commitment to public health and safety.
+                                            <p>
+                                                Anti-Establishment Summary: Despite previous cholera outbreaks and
+                                                consistent warnings about the condition of water pipelines in Kalol
+                                                municipality, the local authorities failed to prevent another outbreak,
+                                                leading to 13 people, including five children, being admitted to health
+                                                facilities in Gandhinagar. Although the State Health Minister, Rushikesh
+                                                Patel, informed Union Home Minister Amit Shah, the reaction came after
+                                                the confirmation of two cases. This repeated failure to address public
+                                                health risks effectively underlines a lack of initiative and foresight
+                                                from the establishment.
+                                            </p>
+                                            <p>(Explanation: This summary misrepresents the information by
+                                                mischaracterizing the timing and the reaction of the authorities.)
+                                            </p>
+                                        </li> -->
+                                        <!-- <li>
+                                            <p><u>A Summary with Inaccurate Quantities or Measurements:
+                                                </u></p>
+                                            <p>A cholera outbreak has affected thousands in the Kalol municipality,
+                                                Gandhinagar. The entire region has been declared a 'cholera-affected'
+                                                area. Over 100 cases have been confirmed, with many children being
+                                                affected.
+                                            </p>
+                                            <p>(Explanation: The summary inaccurately increases the number of affected
+                                                individuals and the geographical scope of the cholera outbreak.)
+                                            </p>
+                                        </li> -->
+                                        <!-- <li>
+                                            <p><u>A Summary with False Attribution:
+                                                </u></p>
+                                            <p>The World Health Organization (WHO) confirmed a cholera outbreak in
+                                                Gandhinagar's Kalol municipality, with 13 people admitted to healthcare
+                                                facilities. The WHO has declared a two-kilometer radius around the
+                                                outbreak area as 'cholera-affected.' The Prime Minister of India has
+                                                been briefed about the situation.
+                                            </p>
+                                            <p>(Explanation: The summary falsely attributes the confirmation of the
+                                                outbreak and the response to the WHO and the Prime Minister of India.)
+                                            </p>
+                                        </li> -->
+
+                                        <!-- <li>
+                                            <p><u>A Summary with Incorrect Context:</u></p>
+                                            <p>Due to extensive city-wide construction, a cholera outbreak has arisen in
+                                                Gandhinagar's Kalol municipality. Thirteen people, including five
+                                                children, have been hospitalized as a result. The construction has
+                                                caused severe damage to water supply pipes, leading to contamination.
+                                            </p>
+                                            <p>(Explanation: This summary incorrectly links the outbreak to city-wide
+                                                construction, which is not mentioned in the original text.)</p>
+                                        </li>
+                                        <li>
+                                            <p><u>A Summary with Fabricated Information:</u></p>
+                                            <p>A cholera outbreak in Gandhinagar has resulted from a genetically
+                                                modified strain that escaped a bioengineering lab. This has led to 13
+                                                hospitalizations, with five children affected. The government has
+                                                declared a two-kilometer radius of the municipality as
+                                                'cholera-affected.'
+                                            </p>
+                                            <p>(Explanation: The outbreak being linked to a genetically modified strain
+                                                and an escape from a lab is entirely fabricated and not supported by the
+                                                original text.)
+                                            </p>
+                                        </li>
+                                    </ul> -->
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="panel-heading" role="tab" id="tab_148">
+                            <h3 class="panel-title" style="color:#078186; font-size: 25px;">
+
+                                <b>Guidelines:</b>
+                            </h3>
+                        </div>
+
+                        <br>
+                        <ol style="font-size: 20px;">
+
+                            <li>Each team can have <b>at most 4 participants</b></li>
+                            <li>A team can submit up to <b>3 different runs</b> for each language and <b>3 different
+                                    runs</b> for task 2 and can submit <b>only one working note</b> </li>
+                            <li> Each team is required to submit a detailed description of their algorithm(s) </li>
+                            <li> Participants are allowed to use any external pretrained models.
+                        </li></ol>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <br>
+    <br>
+    <footer class="sticky-footer">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <h3><span>For any queries write to us at <b><a href="mailto:%20ilsum@googlegroups.com">
+                                ilsum@googlegroups.com </a></b>
+                        <br> Subscribe to our <b><a href="https://groups.google.com/g/ilsum"> mailing list </a></b> for
+                        the latest announcements and discussions.</span>
+                </h3>
+            </div>
+            <div class="copyright text-center my-auto">
+                <span>
+                    <h4>Copyright © ILSUM 2023</h4>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;limited&quot;,&quot;isActive&quot;:false,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
